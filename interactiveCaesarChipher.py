@@ -14,8 +14,8 @@ mode = ''
 
 def toEncrypt(key, translated): 
 
-    message = input('Message to encrypt> ')
-    message = message.upper()
+    #message = input('Message to encrypt> ')
+    #message = message.upper()
 
     for symbol in message:
         if symbol in LETTERS:
@@ -39,8 +39,8 @@ def toEncrypt(key, translated):
 
 def toDecrypt(key, translated):
 
-    message = input('Message to decrypt> ')
-    message = message.upper()
+    #message = input('Message to decrypt> ')
+    #message = message.upper()
 
     for symbol in message:
         if symbol in LETTERS:
@@ -67,6 +67,9 @@ while True:
     mode = mode.lower()
 
     if (mode == 'encrypt') or (mode == 'decrypt'):
+        prompt = str('Message to %s ' % (mode))
+        message = input(prompt + ' > ') 
+        message = message.upper()
         break
     
 
